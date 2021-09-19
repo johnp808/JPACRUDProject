@@ -15,11 +15,38 @@ public class Reseller {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="shoe_count")
-	private int shoeCount;
-
-	// new properties from table will be added here, update get set and to string
+	@Column(name="shoes_sold")
+	private Integer shoesSold;
 	
+	@Column(name="starting_budget")
+	private Double startingBudget;
+	
+	@Column(name="comic_books_sold")
+	private Integer comicBooksSold;
+	
+	@Column(name="hats_sold")
+	private Integer hatsSold;
+	
+	@Column(name="profits_made")
+	private Double profitsMade;
+	
+	@Column(name="seller_user_name")
+	private String sellerUserName;
+	
+	public Reseller () {}
+
+	public Reseller(int id, Integer shoesSold, Double startingBudget, Integer comicBooksSold, Integer hatsSold,
+			Double profitsMade, String sellerUserName) {
+		super();
+		this.id = id;
+		this.shoesSold = shoesSold;
+		this.startingBudget = startingBudget;
+		this.comicBooksSold = comicBooksSold;
+		this.hatsSold = hatsSold;
+		this.profitsMade = profitsMade;
+		this.sellerUserName = sellerUserName;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -28,20 +55,58 @@ public class Reseller {
 		this.id = id;
 	}
 
-	public int getShoeCount() {
-		return shoeCount;
+	public Integer getShoesSold() {
+		return shoesSold;
 	}
 
-	public void setShoeCount(int shoeCount) {
-		this.shoeCount = shoeCount;
+	public void setShoesSold(Integer shoesSold) {
+		this.shoesSold = shoesSold;
+	}
+
+	public Double getStartingBudget() {
+		return startingBudget;
+	}
+
+	public void setStartingBudget(Double startingBudget) {
+		this.startingBudget = startingBudget;
+	}
+
+	public Integer getComicBooksSold() {
+		return comicBooksSold;
+	}
+
+	public void setComicBooksSold(Integer comicBooksSold) {
+		this.comicBooksSold = comicBooksSold;
+	}
+
+	public Integer getHatsSold() {
+		return hatsSold;
+	}
+
+	public void setHatsSold(Integer hatsSold) {
+		this.hatsSold = hatsSold;
+	}
+
+	public Double getProfitsMade() {
+		return profitsMade;
+	}
+
+	public void setProfitsMade(Double profitsMade) {
+		this.profitsMade = profitsMade;
+	}
+
+	public String getSellerUserName() {
+		return sellerUserName;
+	}
+
+	public void setSellerUserName(String sellerUserName) {
+		this.sellerUserName = sellerUserName;
 	}
 
 	@Override
 	public String toString() {
-		return "Reseller [id=" + id + ", shoeCount=" + shoeCount + "]";
+		return "Reseller [id=" + id + ", shoesSold=" + shoesSold + ", startingBudget=" + startingBudget
+				+ ", comicBooksSold=" + comicBooksSold + ", hatsSold=" + hatsSold + ", profitsMade=" + profitsMade
+				+ ", sellerUserName=" + sellerUserName + "]";
 	}
-	
-	
-	
-	
 }

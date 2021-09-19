@@ -44,7 +44,7 @@ class ResellerTest {
 	@Test
 	void test() {
 		assertNotNull(reseller);
-		assertEquals(35, reseller.getShoeCount());
+		assertEquals(35, reseller.getShoesSold());
 		
 		
 	}
