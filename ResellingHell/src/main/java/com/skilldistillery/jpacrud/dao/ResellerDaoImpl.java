@@ -30,7 +30,8 @@ public class ResellerDaoImpl implements ResellerDAO {
 	@Override
 	public List<Reseller> findAll() {
 		String jpql = "SELECT r FROM Reseller r";
-		return em.createQuery(jpql, Reseller.class).getResultList();
+		List<Reseller> reseller = em.createQuery(jpql, Reseller.class).getResultList();
+		return reseller;
 	}
 
 	@Override

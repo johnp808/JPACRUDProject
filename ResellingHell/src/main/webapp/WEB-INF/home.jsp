@@ -17,28 +17,25 @@
 			Reseller Id: <input type="text" name="fid" /> <input type="submit" value="Show Seller Info" />
 		</form>
 
-		<Table class="table" thead-dark table-striped table-hover>
-
-			<thead>
-
-				<tr>
-
-					<th>Id</th>
-					<th>Seller User Name</th>
-
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach var="r" items="${reseller}">
-<tr>
-				<td>${r.id}</td>
-				<td><a href="getReseller.do?rid=${r.id}">
-						${r.sellerUserName} </a></td>
-</tr>
-				</tbody>
-
-			</c:forEach>
-		</Table>
+<table class="table thead-dark table-striped table-hover">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Seller User Name</th>
+		
+		</tr>
+	</thead>
+	
+	<tbody>
+		<c:forEach var="r" items="${resellers}" >
+		<tr>
+			<td> ${r.id } </td>
+			<td><a href="getReseller.do?rid=${r.id }"> ${r.sellerUserName }</a></td> 
+		</tr>
+	</c:forEach>
+	</tbody>		
+		
+</table>
 	</div>
 	<jsp:include page="bootstrapFoot.jsp"></jsp:include>
 </body>
