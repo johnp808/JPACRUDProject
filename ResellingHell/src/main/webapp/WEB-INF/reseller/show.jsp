@@ -31,9 +31,13 @@
 		<br>
 		Profit Made: $${reseller.profitsMade}
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
 	<form action="updateResellerSlot.do" method="POST">
 	<input type="hidden" name="rid" value="${reseller.id}"/> 
-	<br> <input type="submit" value="Update Reseller Stats" />
+	<input type="submit" value="Update Reseller Stats" />
 	</form>
 	<br><form action="deleteReseller.do" method="POST">
 	<input type="hidden" name="rid" value="${reseller.id}"/> 
