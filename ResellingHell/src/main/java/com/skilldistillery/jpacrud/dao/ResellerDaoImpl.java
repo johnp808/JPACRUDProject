@@ -3,8 +3,6 @@ package com.skilldistillery.jpacrud.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -16,7 +14,6 @@ import com.skilldistillery.jpacrud.entities.Reseller;
 @Transactional
 public class ResellerDaoImpl implements ResellerDAO {
 
-	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAReseller");
 
 	@PersistenceContext
 	private EntityManager em;
@@ -36,10 +33,8 @@ public class ResellerDaoImpl implements ResellerDAO {
 
 	@Override
 	public Reseller create(Reseller reseller) {
-		em.getTransaction().begin();
 		em.persist(reseller);
 		em.flush();
-		em.getTransaction().commit();
 		
 		
 		em.close();
@@ -47,14 +42,20 @@ public class ResellerDaoImpl implements ResellerDAO {
 	}
 
 	@Override
-	public Reseller update(int id, Reseller reseller) {
+	public Reseller updateReseller(int id, Reseller reseller) {
 			    Reseller dbReseller = em.find(Reseller.class, id);
-			 
-			    em.getTransaction().begin();
-			    
-			    dbReseller.setSellerUserName(reseller.getSellerUserName());
+				System.out.println(reseller);
 
-			    em.getTransaction().commit();
+			    dbReseller.setSellerUserName(reseller.getSellerUserName());
+			    dbReseller.setProfilePicture(reseller.getProfilePicture());
+			    dbReseller.setStartingBudget(reseller.getStartingBudget());
+			    dbReseller.setShoesSold(reseller.getShoesSold());
+			    dbReseller.setComicBooksSold(reseller.getComicBooksSold());
+			    dbReseller.setHatsSold(reseller.getHatsSold());
+			    dbReseller.setProfitsMade(reseller.getProfitsMade());
+			    System.out.println(dbReseller);
+			   
+			    em.flush();
 			    em.close();
 		return dbReseller;
 	}
@@ -65,13 +66,9 @@ public class ResellerDaoImpl implements ResellerDAO {
 		Reseller reseller = em.find(Reseller.class, id);
 		
 		if(reseller != null) {
-			em.getTransaction().begin();
 			
 			em.remove(reseller); // performs the delete on the managed entity
 			successfullyRemovedReseller = !em.contains(reseller);
-			
-			em.getTransaction().commit();
-			
 		}
 		em.close();
 		return successfullyRemovedReseller;

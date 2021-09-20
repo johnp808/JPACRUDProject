@@ -17,26 +17,23 @@ public class Reseller {
 	
 	@Column(name="shoes_sold")
 	private Integer shoesSold;
-	
 	@Column(name="starting_budget")
 	private Double startingBudget;
-	
 	@Column(name="comic_books_sold")
 	private Integer comicBooksSold;
-	
 	@Column(name="hats_sold")
 	private Integer hatsSold;
-	
 	@Column(name="profits_made")
 	private Double profitsMade;
-	
 	@Column(name="seller_user_name")
 	private String sellerUserName;
+	@Column(name="profile_picture")
+	private String profilePicture;
 	
 	public Reseller () {}
 
 	public Reseller(int id, Integer shoesSold, Double startingBudget, Integer comicBooksSold, Integer hatsSold,
-			Double profitsMade, String sellerUserName) {
+			Double profitsMade, String sellerUserName, String profilePicture) {
 		super();
 		this.id = id;
 		this.shoesSold = shoesSold;
@@ -45,6 +42,7 @@ public class Reseller {
 		this.hatsSold = hatsSold;
 		this.profitsMade = profitsMade;
 		this.sellerUserName = sellerUserName;
+		this.profilePicture = profilePicture;
 	}
 
 	public int getId() {
@@ -103,10 +101,18 @@ public class Reseller {
 		this.sellerUserName = sellerUserName;
 	}
 
+	public String getProfilePicture() {
+		return profilePicture;
+	}
+
+	public void setProfilePicture(String profilePicture) {
+		this.profilePicture = profilePicture;
+	}
+
 	@Override
 	public String toString() {
 		return "Reseller [id=" + id + ", shoesSold=" + shoesSold + ", startingBudget=" + startingBudget
 				+ ", comicBooksSold=" + comicBooksSold + ", hatsSold=" + hatsSold + ", profitsMade=" + profitsMade
-				+ ", sellerUserName=" + sellerUserName + "]";
-	}
+				+ ", sellerUserName=" + sellerUserName + ", profilePicture=" + profilePicture + "]";
+	}	
 }

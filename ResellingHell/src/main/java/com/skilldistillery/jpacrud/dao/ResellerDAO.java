@@ -8,8 +8,8 @@ public interface ResellerDAO {
 
 	Reseller findById(int resellerId);
 	List<Reseller> findAll();
+	Reseller updateReseller(int id, Reseller reseller);
 	Reseller create(Reseller reseller);
-	Reseller update(int id, Reseller reseller);
 	boolean destroy(int id);
 	
 }
