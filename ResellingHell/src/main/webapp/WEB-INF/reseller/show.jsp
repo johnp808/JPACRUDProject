@@ -35,6 +35,10 @@
 	<input type="hidden" name="rid" value="${reseller.id}"/> 
 	<br> <input type="submit" value="Update Reseller Stats" />
 	</form>
+	<br><form action="deleteReseller.do" method="POST">
+	<input type="hidden" name="rid" value="${reseller.id}"/> 
+	<br> <input type="submit" value="Delete Reseller" />
+	</form>
 	<!-- create go home button here -->
 	<a href="/">
        <input type="submit" value="Return Home"/>

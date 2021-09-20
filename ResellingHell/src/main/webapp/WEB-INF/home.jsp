@@ -18,7 +18,7 @@
 		</form>
 		<br>
 		<form action="createResellerSlot.do" method="POST">
-			Add Reseller: <input type="submit" value="Add A Reseller" />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="Add A Reseller" />
 		</form>
 		
 

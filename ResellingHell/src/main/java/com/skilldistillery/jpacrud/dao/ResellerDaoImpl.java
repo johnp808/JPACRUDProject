@@ -59,7 +59,6 @@ public class ResellerDaoImpl implements ResellerDAO {
 	public boolean destroy(int id) {
 		boolean successfullyRemovedReseller = false;
 		Reseller reseller = em.find(Reseller.class, id);
-		
 		if(reseller != null) {		
 			em.remove(reseller); // performs the delete on the managed entity
 			successfullyRemovedReseller = !em.contains(reseller);

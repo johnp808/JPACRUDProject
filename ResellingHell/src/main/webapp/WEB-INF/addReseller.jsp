@@ -12,6 +12,8 @@
 <form action="createReseller.do" method="POST">
 	Resellers Name: <input type="text" name="sellerUserName" /> 
 	<br>
+	Resellers Profile Picture: (Right Click, Open Image In New Tab, Copy And Then Paste The address) <input type="text" name="profilePicture" /> 
+	<br>
 	Starting Budget: <input type="text" name="startingBudget" />
 	<br>
 	Shoes Sold: <input type="text" name="soldShoes" />

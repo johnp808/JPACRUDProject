@@ -53,4 +53,9 @@ public class ResellerController {
 		System.out.println("Dick");
 		return "updateSuccess";
 	}
+	@RequestMapping (path="deleteReseller.do")
+	public String deleteReseller(Integer rid, Model model) {
+		model.addAttribute("reseller", dao.destroy(rid));
+		return "deleted";
+	}
 }
