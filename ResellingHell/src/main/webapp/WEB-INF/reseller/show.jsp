@@ -32,7 +32,7 @@
 		Profit Made: $${reseller.profitsMade}
 	</div>
 	<form action="updateResellerSlot.do" method="POST">
-	<input type="hidden" name="rid" value="${reseller.id }"/> 
+	<input type="hidden" name="rid" value="${reseller.id}"/> 
 	<br> <input type="submit" value="Update Reseller Stats" />
 	</form>
 	<!-- create go home button here -->

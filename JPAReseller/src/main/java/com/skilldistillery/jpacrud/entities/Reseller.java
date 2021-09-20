@@ -17,16 +17,22 @@ public class Reseller {
 	
 	@Column(name="shoes_sold")
 	private Integer shoesSold;
+	
 	@Column(name="starting_budget")
 	private Double startingBudget;
+	
 	@Column(name="comic_books_sold")
 	private Integer comicBooksSold;
+	
 	@Column(name="hats_sold")
 	private Integer hatsSold;
+	
 	@Column(name="profits_made")
 	private Double profitsMade;
+	
 	@Column(name="seller_user_name")
 	private String sellerUserName;
+	
 	@Column(name="profile_picture")
 	private String profilePicture;
 	

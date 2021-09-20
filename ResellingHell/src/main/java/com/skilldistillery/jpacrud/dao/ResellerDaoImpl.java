@@ -35,8 +35,6 @@ public class ResellerDaoImpl implements ResellerDAO {
 	public Reseller create(Reseller reseller) {
 		em.persist(reseller);
 		em.flush();
-		
-		
 		em.close();
 		return reseller;
 	}
@@ -44,8 +42,6 @@ public class ResellerDaoImpl implements ResellerDAO {
 	@Override
 	public Reseller updateReseller(int id, Reseller reseller) {
 			    Reseller dbReseller = em.find(Reseller.class, id);
-				System.out.println(reseller);
-
 			    dbReseller.setSellerUserName(reseller.getSellerUserName());
 			    dbReseller.setProfilePicture(reseller.getProfilePicture());
 			    dbReseller.setStartingBudget(reseller.getStartingBudget());
@@ -53,25 +49,22 @@ public class ResellerDaoImpl implements ResellerDAO {
 			    dbReseller.setComicBooksSold(reseller.getComicBooksSold());
 			    dbReseller.setHatsSold(reseller.getHatsSold());
 			    dbReseller.setProfitsMade(reseller.getProfitsMade());
-			    System.out.println(dbReseller);
 			   
 			    em.flush();
 			    em.close();
 		return dbReseller;
 	}
-	
+
 	@Override
 	public boolean destroy(int id) {
 		boolean successfullyRemovedReseller = false;
 		Reseller reseller = em.find(Reseller.class, id);
 		
-		if(reseller != null) {
-			
+		if(reseller != null) {		
 			em.remove(reseller); // performs the delete on the managed entity
 			successfullyRemovedReseller = !em.contains(reseller);
 		}
 		em.close();
 		return successfullyRemovedReseller;
-	}
-	
+	}	
 }

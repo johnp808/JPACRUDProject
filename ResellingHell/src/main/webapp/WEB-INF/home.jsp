@@ -16,6 +16,10 @@
 		<form action="getReseller.do?id=${reseller.id }" method="GET">
 			Reseller Id: <input type="text" name="rid" /> <input type="submit" value="Show Seller Info By Id" />
 		</form>
+		<br>
+		<form action="createResellerSlot.do" method="POST">
+			Add Reseller: <input type="submit" value="Add A Reseller" />
+		</form>
 		
 
 <table class="table thead-dark table-striped table-hover">
@@ -31,8 +35,8 @@
 	<tbody>
 		<c:forEach var="r" items="${resellers}" >
 		<tr>
-			<td>${r.id }</td>
-			<td><a href="getReseller.do?rid=${r.id }">
+			<td>${r.id}</td>
+			<td><a href="getReseller.do?rid=${r.id}">
 			<img class="profile-picture" src="${ r.profilePicture}" style="width:200px; height:200px" width="200" height="200"></img></a></td>
 			<td style="text-align:left">${r.sellerUserName }</td>
 		</tr>
