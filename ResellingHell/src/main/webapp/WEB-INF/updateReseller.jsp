@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>RH: Update Resellers Info </title>
-	<jsp:include page="bootstrapHead.jsp"></jsp:include>
+<meta charset="UTF-8">
+<title>RH: Update Resellers Info</title>
+<jsp:include page="bootstrapHead.jsp"></jsp:include>
 </head>
 <body>
 
@@ -33,7 +33,7 @@
 		<p>
 			<img class="profile-picture" src="${reseller.profilePicture}"
 				style="float: left; margin-right: 15px;" width="200" height="200"></img>
-			
+
 		</p>
 		<p>Starting Budget: $${reseller.startingBudget}</p>
 		<p>Shoes Sold: ${reseller.shoesSold}</p>
@@ -42,22 +42,22 @@
 		<p>Profit Made: ${reseller.profitsMade}</p>
 
 		<form action="updateReseller.do" method="POST">
-		<input type="hidden" name="rid" value="${reseller.id}"/> 
+			<input type="hidden" name="rid" value="${reseller.id}" />
 			<!-- <form:input path="productName"  value="${cartDetail.product.name}"/>  -->
 			Seller User Name: <input type="text"
 				value="${reseller.sellerUserName}" name="sellerUserName" /> <br>
 			Avatar(open an image in a new tab then pasted the link here): <input
-				type="text" value="${reseller.profilePicture}" name="profilePicture" /> <br>
-			Starting Budget: <input type="text"
-				value="${reseller.startingBudget}" name="startingBudget" /> <br> Shoes
-			Sold: <input type="text" value="${reseller.shoesSold}"
+				type="text" value="${reseller.profilePicture}" name="profilePicture" />
+			<br> Starting Budget: <input type="text"
+				value="${reseller.startingBudget}" name="startingBudget" /> <br>
+			Shoes Sold: <input type="text" value="${reseller.shoesSold}"
 				name="shoesSold" /> <br> Comic Books Sold: <input type="text"
 				value="${reseller.comicBooksSold}" name="comicBooksSold" /> <br>
 			Hats Sold: <input type="text" value="${reseller.hatsSold}"
 				name="hatsSold" /> <br> Profit Made: <input type="text"
 				value="${reseller.profitsMade}" name="profitsMade" /> <br> <br>
 			<input type="submit" value="Update" ${reseller.sellerUserName} /> <a
-				href="/"> <input type="submit" value="Return Home" />
+				href="home.do"> <input type="submit" value="Return Home" />
 			</a>
 		</form>
 	</div>

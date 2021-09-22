@@ -11,7 +11,7 @@
 <body>
 		<h2>You Deleted The Reseller From The Database</h2>
 
-<a href="/"> <input type="submit" value="Return Home" /></a>
+<a href="home.do"> <input type="submit" value="Return Home" /></a>
 <jsp:include page="bootstrapHead.jsp"></jsp:include>
 </body>
 </html>

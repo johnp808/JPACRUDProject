@@ -11,7 +11,8 @@
 <jsp:include page="bootstrapHead.jsp"></jsp:include>
 </head>
 <body>
-	<h1>Check Out A Sellers Information By Clicking Their Avatar</h1>
+<h1><b>Reselling Hell</b></h1>
+	<h3>Check Out A Sellers Information By Clicking Their Avatar</h3>
 	<div class="container-fluid">
 		<form action="getReseller.do?id=${reseller.id }" method="GET">
 			Reseller Id: <input type="text" name="rid" /> <input type="submit" value="Show Seller Info By Id" />

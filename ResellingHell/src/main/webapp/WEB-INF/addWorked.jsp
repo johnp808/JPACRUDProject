@@ -1,6 +1,6 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +9,9 @@
 <jsp:include page="bootstrapHead.jsp"></jsp:include>
 </head>
 <body>
-		<h2>You Added A New Reseller</h2>
+	<h2>You Added A New Reseller</h2>
 
-<a href="/"> <input type="submit" value="Return Home" /></a>
-<jsp:include page="bootstrapHead.jsp"></jsp:include>
+	<a href="home.do"> <input type="submit" value="Return Home" /></a>
+	<jsp:include page="bootstrapHead.jsp"></jsp:include>
 </body>
 </html>
