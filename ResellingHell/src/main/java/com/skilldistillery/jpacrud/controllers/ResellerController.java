@@ -32,12 +32,12 @@ public class ResellerController {
 	}
 
 	@RequestMapping(path = "createResellerSlot.do", method = RequestMethod.POST)
-	public String createPokemonForm(Model model, Reseller reseller) {
+	public String createResellerForm(Model model, Reseller reseller) {
 		return "addReseller";
 	}
 
 	@RequestMapping(path = "createReseller.do", method = RequestMethod.POST)
-	public String createPokemon(Model model, Reseller reseller) {
+	public String createReseller(Model model, Reseller reseller) {
 		model.addAttribute("reseller", dao.create(reseller));
 		return "addWorked";
 	}
@@ -54,7 +54,6 @@ public class ResellerController {
 	@RequestMapping(path = "updateReseller.do", method = RequestMethod.POST)
 	public String updateReseller(Integer rid, Model model, Reseller reseller) {
 		model.addAttribute("reseller", dao.updateReseller(rid, reseller));
-		System.out.println("Dick");
 		return "updateSuccess";
 	}
 
